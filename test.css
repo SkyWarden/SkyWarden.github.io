@@ -6,8 +6,14 @@ p
 
 #about .myP
 {
-	color: red;
-	font-size: 30px;
+	color: black;
+	font-size: 10px;
+}
+
+#about .myh1
+{
+	color: #B7BBB7;
+	font-size: 20px;
 }
 
 header 
@@ -15,6 +21,14 @@ header
     background-color: #78C755;
     padding: 100px;
     text-align: center;
-    font-size: 40px;
+	font-weight: 800;
+    font-size: 50px;
+    font-family: Helvetica;
     color: white;
+}
+
+#about .myul
+{
+	color: black;
+	font-size: 12px;
 }
