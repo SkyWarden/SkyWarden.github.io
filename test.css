@@ -1,16 +1,36 @@
 p
 {
-	color:blue;
-	font-size:30px;
+	color: black;
+	font-size: 10px;
 }
 
 #about .myP
 {
-	color: red;
-	font-size:30px;
+	color: black;
+	font-family: Helvetica;
+	font-size: 10px;
 }
 
-body 
+#about .myh1
 {
-   background-color: #cccccc;
+	color: #B7BBB7;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+header 
+{
+    background-color: #78C755;
+    padding: 100px;
+    text-align: center;
+	font-weight: 800;
+    font-size: 50px;
+    font-family: Helvetica;
+    color: white;
+}
+
+#about .myul
+{
+	color: black;
+	font-size: 12px;
 }
