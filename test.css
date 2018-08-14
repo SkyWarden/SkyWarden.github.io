@@ -7,12 +7,14 @@ p
 #about .myP
 {
 	color: black;
+	font-family: Helvetica;
 	font-size: 10px;
 }
 
 #about .myh1
 {
 	color: #B7BBB7;
+	font-family: Helvetica;
 	font-size: 20px;
 }
 
