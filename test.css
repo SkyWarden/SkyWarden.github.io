@@ -1,16 +1,20 @@
 p
 {
-	color:blue;
-	font-size:30px;
+	color: black;
+	font-size: 10px;
 }
 
 #about .myP
 {
 	color: red;
-	font-size:30px;
+	font-size: 30px;
 }
 
-body 
+header 
 {
-   background-color: #cccccc;
+    background-color: #78C755;
+    padding: 100px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
 }
