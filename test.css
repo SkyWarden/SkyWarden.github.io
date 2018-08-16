@@ -1,7 +1,7 @@
-p
+html, body
 {
-	color: black;
-	font-size: 10px;
+	padding: 0;
+	margin: 0;
 }
 
 #about .myP
@@ -18,15 +18,54 @@ p
 	font-size: 20px;
 }
 
+#content
+{
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 1500px;
+	margin: auto;
+}
+
 header 
 {
-    background-color: #78C755;
+    background-color: #70ad47;
     padding: 100px;
     text-align: center;
 	font-weight: 800;
     font-size: 50px;
     font-family: Helvetica;
     color: white;
+    margin-top: 75px;
+}
+
+div.dev_header
+{
+	position: relative;
+	background-image: url("images/development_title.png");
+	background-position: 0px -25px;
+	background-repeat: no-repeat;
+	width: inherit;
+	max-width: inherit;
+	top: 0;
+	/*margin-top: 75px;*/
+
+	background-size: 1500px 555px;
+	height: 500px;
+}
+
+div.dev_header div.dev_header_text
+{
+	position: absolute;
+	bottom: 0;
+	width: inherit;
+	max-width: inherit;
+	text-align: center;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 64px;
+	color: #FFFFFF;
+	font-weight: 400;
+	text-shadow: 1px 1px 2px black, 0 0 25px #70ad47, 0 0 5px darkgreen;
 }
 
 #about .myul
