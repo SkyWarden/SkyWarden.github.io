@@ -27,34 +27,34 @@ html, body
 	margin: auto;
 }
 
-header 
+#header 
 {
+    position: relative;
     background-color: #70ad47;
-    padding: 100px;
+    width: 100%;
+    max-width: 1500px;
+    top: 0;
+    height: 500px;
     text-align: center;
 	font-weight: 800;
     font-size: 50px;
     font-family: Helvetica;
     color: white;
-    margin-top: 75px;
 }
 
-div.dev_header
+div.header
 {
 	position: relative;
-	background-image: url("images/development_title.png");
-	background-position: 0px -25px;
-	background-repeat: no-repeat;
+	background-color: #70ad47;
 	width: inherit;
 	max-width: inherit;
 	top: 0;
-	/*margin-top: 75px;*/
 
-	background-size: 1500px 555px;
+	
 	height: 500px;
 }
 
-div.dev_header div.dev_header_text
+div.header div.header_text
 {
 	position: absolute;
 	bottom: 0;
@@ -66,6 +66,24 @@ div.dev_header div.dev_header_text
 	color: #FFFFFF;
 	font-weight: 400;
 	text-shadow: 1px 1px 2px black, 0 0 25px #70ad47, 0 0 5px darkgreen;
+}
+
+div.header.development
+{
+	background-image: url("images/development_title.png");
+	background-position: 0px -25px;
+	background-repeat: no-repeat;
+	background-size: 1500px 555px;
+}
+
+div.header.home
+{
+
+}
+
+div.header.about
+{
+	
 }
 
 #about .myul
