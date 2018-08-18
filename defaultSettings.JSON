@@ -1,0 +1,11 @@
+{
+	"width": 60,
+	"height": 60,
+	"xLeftMost": 100,
+	"xRightMost": 400,
+	"x": 300,
+	"y": 280,
+	"delta": 10,
+	"backgroundColor": "#e6f2ff",
+	"fillColor": "#000000"
+}
