@@ -949,7 +949,7 @@ function gameEnd()
 	}
 	ctx.fillStyle = "#000000";
 	ctx.fillRect(0, 0, 640, 480);
-	ctx.drawImage(loseImage,0,0);
+	ctx.drawImage(loseImage, 0, 0);
 	gameOn = false;
 }
 
