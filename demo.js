@@ -50,11 +50,11 @@ function changeSettings(input)
 
 	xmlhttp.onreadystatechange = function() 
 	{
-    	if(this.readyState == 4 && this.status == 200) 
-    	{
-        	var myObj = JSON.parse(this.responseText);
-        	settings = myObj;
-    	}
+		if(this.readyState == 4 && this.status == 200) 
+		{
+			var myObj = JSON.parse(this.responseText);
+			settings = myObj;
+		}
 	};
 
 	if(input == 0)
