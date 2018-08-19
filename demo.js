@@ -52,8 +52,7 @@ function changeSettings(input)
 	{
 		if(this.readyState == 4 && this.status == 200) 
 		{
-			var myObj = JSON.parse(this.responseText);
-			settings = myObj;
+			settings= JSON.parse(this.responseText);
 		}
 	};
 
