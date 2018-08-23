@@ -1,11 +1,52 @@
 {
-	"width": 100,
-	"height": 100,
-	"xLeftMost": 150,
-	"xRightMost": 350,
-	"x": 300,
-	"y": 250,
-	"delta": 30,
-	"backgroundColor": "#99ff99",
-	"fillColor": "#ff0000"
+	"canvasOne": 
+	{
+		"canvasStartX": 0,
+		"canvasStartY": 0,
+		"canvasWidth": 700,
+		"canvasHeight": 400,
+		"width": 60,
+		"height": 60,
+		"xLeftMost": 250,
+		"xRightMost": 450,
+		"x": 350,
+		"y": 200,
+		"delta": 20,
+		"backgroundColor": "#b3ffff",
+		"fillColor": "#9966ff"
+	},
+
+	"canvasTwo": 
+	{
+		"canvasStartX": 700,
+		"canvasStartY": 0,
+		"canvasWidth": 300,
+		"canvasHeight": 200,
+		"width": 50,
+		"height": 50,
+		"xLeftMost": 750,
+		"xRightMost": 950,
+		"x": 850,
+		"y": 100,
+		"delta": 30,
+		"backgroundColor": "#ccff99",
+		"fillColor": "#b30059"
+	},
+
+	"canvasThree": 
+	{
+		"canvasStartX": 700,
+		"canvasStartY": 200,
+		"canvasWidth": 300,
+		"canvasHeight": 200,
+		"width": 40,
+		"height": 40,
+		"xLeftMost": 750,
+		"xRightMost": 950,
+		"x": 850,
+		"y": 300,
+		"delta": 40,
+		"backgroundColor": "#ffff33",
+		"fillColor": "#003380"
+	}
 }
