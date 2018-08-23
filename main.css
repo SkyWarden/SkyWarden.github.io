@@ -4,17 +4,18 @@ html, body
 	margin: 0;
 }
 
-#about .myP
+#myP
 {
-	color: black;
-	font-family: Helvetica;
-	font-size: 10px;
+	color: #636363;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	line-height: 30px;
+	font-size: 16px;
 }
 
 #about .myh1
 {
-	color: #B7BBB7;
-	font-family: Helvetica;
+	color: #636363;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;;
 	font-size: 20px;
 }
 
@@ -147,6 +148,15 @@ span.about
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 230px;
+}
+
+#body
+{
+	width: inherit;
+	max-width: 1000px;
+	min-width: 1000px;
+	margin: auto;
+	padding-left: 50px;
 }
 
 #about .myul
