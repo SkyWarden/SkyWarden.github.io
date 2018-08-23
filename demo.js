@@ -58,7 +58,7 @@ var settings =
 
 function gameStatusInterval()	
 { 
-  	setInterval(update, 1000/500.0); 
+  	setInterval(update, 1000/80.0); 
 }
 
 function update()
@@ -91,6 +91,27 @@ function update()
 		settings.canvasThree.delta *= -1;
 	}
 
+
+	// if(cursors.left.isDown)
+	// {
+	// 	settings.canvasOne.x -= 8;
+	// }
+	// else if(cursors.right.isDown)
+	// {
+	// 	settings.canvasOne.x += 8;
+	// }
+
+	// if(cursors.up.isDown)
+	// {
+	// 	settings.canvasOne.y -= 8;
+	// }
+	// else if(cursors.down.isDown)
+	// {
+	// 	settings.canvasOne.y += 8;
+	// }
+
+
+
 	// settings.canvasOne.x += settings.canvasOne.delta;
 	settings.canvasTwo.x += settings.canvasTwo.delta;
 	settings.canvasThree.x += settings.canvasThree.delta;
@@ -104,6 +125,8 @@ function update()
 	gameWindow.fillStyle = settings.canvasThree.fillColor;
 	gameWindow.fillRect(settings.canvasThree.x, settings.canvasThree.y, settings.canvasThree.width, settings.canvasThree.height);
 }
+
+
 
 $(document).keydown(function(key) 
 {
