@@ -20,12 +20,7 @@ ctx.fillRect(settings.x, settings.y, settings.width, settings.height);
 
 function gameStatusInterval()	
 { 
-  	setInterval(gameStatus, 1000/60.0); 
-}
-
-function gameStatus()
-{
-	update();
+  	setInterval(update, 1000/60.0); 
 }
 
 function update()
@@ -52,7 +47,7 @@ function changeSettings(input)
 	{
 		if(this.readyState == 4 && this.status == 200) 
 		{
-			settings= JSON.parse(this.responseText);
+			settings = JSON.parse(this.responseText);
 		}
 	};
 
