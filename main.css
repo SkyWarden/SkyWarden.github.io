@@ -2,6 +2,9 @@ html, body
 {
 	padding: 0;
 	margin: 0;
+	background-image: url("images/background.png");
+	background-attachment: fixed;
+	height: 100%;
 }
 
 #myP
@@ -152,13 +155,21 @@ span.about
 	padding-top: 230px;
 }
 
-#body
+#inner_section
 {
 	width: inherit;
 	max-width: 1000px;
 	min-width: 1000px;
 	margin: auto;
 	padding: 0px 50px;
+}
+
+#sub_section
+{
+	position: absolute;
+	width: inherit;
+	max-width: inherit;
+	background-color: white;
 }
 
 #about .myul
