@@ -17,6 +17,7 @@ html, body
 	font-size: 16px;
 	text-align: justify;
 	text-justify: inter-word;
+	margin-bottom: 0px;
 }
 
 #about .myh1
@@ -24,6 +25,8 @@ html, body
 	color: #636363;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;;
 	font-size: 20px;
+	margin-top: 0px;
+	padding-top: 16px;
 }
 
 #content
@@ -159,6 +162,7 @@ span.about
 
 #inner_section
 {
+	position: relative;
 	width: inherit;
 	max-width: 1000px;
 	min-width: 1000px;
@@ -166,9 +170,14 @@ span.about
 	padding: 0px 50px;
 }
 
+#specifications
+{
+	image: url("images/prox.png");
+}
+
 #sub_section
 {
-	position: absolute;
+	position: relative;
 	width: inherit;
 	max-width: inherit;
 	background-color: white;
