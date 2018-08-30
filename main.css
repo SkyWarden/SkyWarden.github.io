@@ -9,48 +9,13 @@ html, body
 	height: 100%;
 }
 
-#myP
-{
-	color: #636363;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: justify;
-	text-justify: inter-word;
-	margin-bottom: 0px;
-}
-
-#myh1
+h1.section_title
 {
 	color: #636363;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;;
 	font-size: 20px;
 	margin-top: 0px;
 	padding-top: 16px;
-}
-
-#content
-{
-	left: 0;
-	right: 0;
-	width: 100%;
-	max-width: 1500px;
-	margin: auto;
-}
-
-#header 
-{
-    position: relative;
-    background-color: #70ad47;
-    width: 100%;
-    max-width: 1500px;
-    top: 0;
-    height: 500px;
-    text-align: center;
-	font-weight: 800;
-    font-size: 50px;
-    font-family: Helvetica;
-    color: white;
 }
 
 div.header
@@ -125,6 +90,24 @@ div.header div.header_about_box
 	line-height: 125px;
 }
 
+div.sub_section
+{
+	position: relative;
+	width: inherit;
+	max-width: inherit;
+	background-color: white;
+}
+
+div.inner_section
+{
+	position: relative;
+	width: inherit;
+	max-width: 1000px;
+	min-width: 1000px;
+	margin: auto;
+	padding: 0px 50px;
+}
+
 span.home
 {
 	position: absolute;
@@ -149,6 +132,26 @@ span.about
 	padding-left: 10px;
 }
 
+#wide_sec_text
+{
+	color: #636363;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-bottom: 0px;
+}
+
+#content
+{
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 1500px;
+	margin: auto;
+}
+
 #unr_logo
 {
 	display: block;
@@ -160,27 +163,9 @@ span.about
 	padding-top: 230px;
 }
 
-#inner_section
-{
-	position: relative;
-	width: inherit;
-	max-width: 1000px;
-	min-width: 1000px;
-	margin: auto;
-	padding: 0px 50px;
-}
-
 #specifications
 {
 	image: url("images/prox.png");
-}
-
-#sub_section
-{
-	position: relative;
-	width: inherit;
-	max-width: inherit;
-	background-color: white;
 }
 
 #about .myul
