@@ -13,7 +13,7 @@ h1.section_title
 {
 	color: #636363;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;;
-	font-size: 20px;
+	font-size: 26px;
 	margin-top: 0px;
 	padding-top: 16px;
 }
@@ -108,6 +108,14 @@ div.inner_section
 	padding: 0px 50px;
 }
 
+div.specifications
+{
+	position: relative;
+	padding-left: 50px;
+	width: 375px;
+	float: left;
+}
+
 span.home
 {
 	position: absolute;
@@ -132,7 +140,7 @@ span.about
 	padding-left: 10px;
 }
 
-#wide_sec_text
+p.main_format
 {
 	color: #636363;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -163,13 +171,13 @@ span.about
 	padding-top: 230px;
 }
 
-#specifications
-{
-	image: url("images/prox.png");
-}
-
 #about .myul
 {
 	color: black;
 	font-size: 12px;
+}
+
+#clear
+{
+	clear: both;
 }
