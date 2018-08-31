@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html, body
 {
 	padding: 0;
@@ -12,7 +14,7 @@ html, body
 h1.section_title
 {
 	color: #636363;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;;
+	font-family: 'Roboto', sans-serif;
 	font-size: 26px;
 	margin-top: 0px;
 	padding-top: 16px;
@@ -35,7 +37,7 @@ div.header div.header_text
 	width: inherit;
 	max-width: inherit;
 	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 64px;
 	color: #FFFFFF;
 	font-weight: 400;
@@ -125,7 +127,7 @@ span.home
 	max-width: inherit;
 	min-width: 650px;
 	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
 	color: #FFFFFF;
 	font-weight: 700;
@@ -134,7 +136,7 @@ span.home
 
 span.about
 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
 	display: inline-block;
 	vertical-align: middle;
@@ -145,7 +147,7 @@ span.about
 p.main_format
 {
 	color: #636363;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 30px;
 	font-size: 16px;
 	text-align: justify;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 /* The navigation bar */
 .navbar 
 {
@@ -17,7 +19,7 @@
     float: right;
     display: block;
     color: #f2f2f2;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: center;
     font-weight: 700;
@@ -32,6 +34,7 @@
     color: black;
 }
 
+/*SkyWarden logo*/
 .navbar img
 {
     float: left;
