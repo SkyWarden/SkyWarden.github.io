@@ -96,6 +96,8 @@ div.sub_section
 	width: inherit;
 	max-width: inherit;
 	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 690px -150px;
 }
 
 div.inner_section
