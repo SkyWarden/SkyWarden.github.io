@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.footer
+{
+	position: absolute;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.6);
+	margin-bottom: 0;
+	width: 100%;
+	max-width: 1500px;
+	height: 50px;
+}
+
+.footer span
+{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+#content
+{
+	padding-left: 25px;
+	padding-top: 18px;
+}

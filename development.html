@@ -6,13 +6,14 @@
 
 	<title>ADNS Development</title>
 
-	<link href="main.css" rel="stylesheet" type="text/css" />
+	<link href="main.css" rel="stylesheet" type="text/css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<script>
 	$(function(){
-		$("#navbar_object").load("navbar.html"); 
+		$("#navbar").load("navbar.html");
+		$("#footer").load("footer.html");
 		});
 	</script> 
 
@@ -22,7 +23,7 @@
 
 	<div id = "content">
 
-		<div id="navbar_object"></div>
+		<div id="navbar"></div>
 			
 		<div class = "header development">
 
@@ -33,6 +34,8 @@
 		</div>
 
 		<p>This is where the documentation, diagrams, and schematics can go.</p>
+
+		<div id = "footer"></div>
 
 	</div>
 
