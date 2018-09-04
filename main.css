@@ -39,6 +39,7 @@ div.header div.header_text
 	max-width: inherit;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
+	padding-bottom: 0;
 	font-size: 64px;
 	color: #FFFFFF;
 	font-weight: 400;
@@ -153,6 +154,7 @@ p.main_format
 	text-align: justify;
 	text-justify: inter-word;
 	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 .video
