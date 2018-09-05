@@ -176,6 +176,14 @@ p.main_format
     position:absolute;
 }
 
+.spec_header
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: black;
+}
+
 #content
 {
 	left: 0;
