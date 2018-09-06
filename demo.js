@@ -1,6 +1,9 @@
 
 var demoCanvas = document.getElementById("demoCanvas"); 
 var gameWindow = demoCanvas.getContext("2d");
+var RIGHT = false;
+var LEFT = false;
+var counter = 0; 
 
 var settings = 
 {
@@ -112,8 +115,28 @@ function updateOne()
 	// 	settings.canvasOne.y += 8;
 	// }
 
+	// if(RIGHT)
+	// {
+	// 	settings.canvasOne.x -= counter;
+	// }
+	// if(LEFT)
+	// {
+	// 	settings.canvasOne.x += counter;
+	// }
 
 
+	settings.canvasOne.x += counter;
+
+	if(counter < 0 && !LEFT)
+	{
+		counter += 0.5;
+	}
+
+	if(counter > 0 && !RIGHT)
+	{	
+		counter -= 0.5;
+	}	
+		
 	// settings.canvasOne.x += settings.canvasOne.delta;
 	// settings.canvasTwo.x += settings.canvasTwo.delta;
 	// settings.canvasThree.x += settings.canvasThree.delta;
@@ -167,19 +190,46 @@ $(document).keydown(function(key)
 {
 	if(key.keyCode == 37)
 	{
-		settings.canvasOne.x -= 8;
+		// settings.canvasOne.x -= 8;
+		LEFT = true;
+		counter = -10;
 	}
 	else if(key.keyCode == 39)	
 	{	
-		settings.canvasOne.x += 8;
+		// settings.canvasOne.x += 8;
+		RIGHT = true;
+		counter = 10;
+
 	}
 	else if(key.keyCode == 38)
 	{
-		 settings.canvasOne.y -= 8;
+		 // settings.canvasOne.y -= 8;
 	}
 	else if(key.keyCode == 40)
 	{		
-		settings.canvasOne.y += 8;
+		// settings.canvasOne.y += 8;
+	}
+});
+
+$(document).keyup(function(key) 
+{
+	if(key.keyCode == 37)
+	{
+		// settings.canvasOne.x -= 8;
+		LEFT = false;
+	}
+	else if(key.keyCode == 39)	
+	{	
+		// settings.canvasOne.x += 8;
+		RIGHT = false;
+	}
+	else if(key.keyCode == 38)
+	{
+		 // settings.canvasOne.y -= 8;
+	}
+	else if(key.keyCode == 40)
+	{		
+		// settings.canvasOne.y += 8;
 	}
 });
 
