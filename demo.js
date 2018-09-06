@@ -3,7 +3,10 @@ var demoCanvas = document.getElementById("demoCanvas");
 var gameWindow = demoCanvas.getContext("2d");
 var RIGHT = false;
 var LEFT = false;
-var counter = 0; 
+var UP = false;
+var DOWN = false;
+var horizontal = 0;
+var vertical = 0; 
 
 var settings = 
 {
@@ -96,45 +99,28 @@ function updateOne()
 	// 	settings.canvasThree.delta *= -1;
 	// }
 
+	settings.canvasOne.x += horizontal;
 
-	// if(cursors.left.isDown)
-	// {
-	// 	settings.canvasOne.x -= 8;
-	// }
-	// else if(cursors.right.isDown)
-	// {
-	// 	settings.canvasOne.x += 8;
-	// }
-
-	// if(cursors.up.isDown)
-	// {
-	// 	settings.canvasOne.y -= 8;
-	// }
-	// else if(cursors.down.isDown)
-	// {
-	// 	settings.canvasOne.y += 8;
-	// }
-
-	// if(RIGHT)
-	// {
-	// 	settings.canvasOne.x -= counter;
-	// }
-	// if(LEFT)
-	// {
-	// 	settings.canvasOne.x += counter;
-	// }
-
-
-	settings.canvasOne.x += counter;
-
-	if(counter < 0 && !LEFT)
+	if(horizontal < 0 && !LEFT)
 	{
-		counter += 0.5;
+		horizontal += 0.5;
 	}
 
-	if(counter > 0 && !RIGHT)
+	if(horizontal > 0 && !RIGHT)
 	{	
-		counter -= 0.5;
+		horizontal -= 0.5;
+	}	
+
+	settings.canvasOne.y += vertical;
+
+	if(vertical < 0 && !UP)
+	{
+		vertical += 0.5;
+	}
+
+	if(vertical > 0 && !DOWN)
+	{	
+		vertical -= 0.5;
 	}	
 		
 	// settings.canvasOne.x += settings.canvasOne.delta;
@@ -192,21 +178,24 @@ $(document).keydown(function(key)
 	{
 		// settings.canvasOne.x -= 8;
 		LEFT = true;
-		counter = -10;
+		horizontal = -10;
 	}
 	else if(key.keyCode == 39)	
 	{	
 		// settings.canvasOne.x += 8;
 		RIGHT = true;
-		counter = 10;
-
+		horizontal = 10;
 	}
 	else if(key.keyCode == 38)
 	{
+		UP = true;
+		vertical = -10
 		 // settings.canvasOne.y -= 8;
 	}
 	else if(key.keyCode == 40)
 	{		
+		DOWN = true;
+		vertical = 10;
 		// settings.canvasOne.y += 8;
 	}
 });
@@ -225,10 +214,12 @@ $(document).keyup(function(key)
 	}
 	else if(key.keyCode == 38)
 	{
+		UP = false;
 		 // settings.canvasOne.y -= 8;
 	}
 	else if(key.keyCode == 40)
 	{		
+		DOWN = false;
 		// settings.canvasOne.y += 8;
 	}
 });
