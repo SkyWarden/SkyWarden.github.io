@@ -58,21 +58,23 @@ var settings =
 
 function gameStatusInterval()	
 { 
-  	setInterval(update, 1000/80.0); 
+  	setInterval(updateOne, 40); 
+  	setInterval(updateTwo, 80); 
+  	setInterval(updateThree, 10); 
 }
 
-function update()
+function updateOne()
 {
 	// gameWindow.fillStyle = "#000000";
 	// gameWindow.fillRect(0, 0, 1000, 400);
 	gameWindow.fillStyle = settings.canvasOne.backgroundColor;
 	gameWindow.fillRect(settings.canvasOne.canvasStartX, settings.canvasOne.canvasStartY, settings.canvasOne.canvasWidth, settings.canvasOne.canvasHeight);
 	
-	gameWindow.fillStyle = settings.canvasTwo.backgroundColor;
-	gameWindow.fillRect(settings.canvasTwo.canvasStartX, settings.canvasTwo.canvasStartY, settings.canvasTwo.canvasWidth, settings.canvasTwo.canvasHeight);
+	// gameWindow.fillStyle = settings.canvasTwo.backgroundColor;
+	// gameWindow.fillRect(settings.canvasTwo.canvasStartX, settings.canvasTwo.canvasStartY, settings.canvasTwo.canvasWidth, settings.canvasTwo.canvasHeight);
 	
-	gameWindow.fillStyle = settings.canvasThree.backgroundColor;
-	gameWindow.fillRect(settings.canvasThree.canvasStartX, settings.canvasThree.canvasStartY, settings.canvasThree.canvasWidth, settings.canvasThree.canvasHeight);
+	// gameWindow.fillStyle = settings.canvasThree.backgroundColor;
+	// gameWindow.fillRect(settings.canvasThree.canvasStartX, settings.canvasThree.canvasStartY, settings.canvasThree.canvasWidth, settings.canvasThree.canvasHeight);
 
 
 
@@ -81,15 +83,15 @@ function update()
 	// 	settings.canvasOne.delta *= -1;
 	// }
 
-	if(settings.canvasTwo.x >= settings.canvasTwo.xRightMost || settings.canvasTwo.x <= settings.canvasTwo.xLeftMost)
-	{
-		settings.canvasTwo.delta *= -1;
-	}
+	// if(settings.canvasTwo.x >= settings.canvasTwo.xRightMost || settings.canvasTwo.x <= settings.canvasTwo.xLeftMost)
+	// {
+	// 	settings.canvasTwo.delta *= -1;
+	// }
 
-	if(settings.canvasThree.x >= settings.canvasThree.xRightMost || settings.canvasThree.x <= settings.canvasThree.xLeftMost)
-	{
-		settings.canvasThree.delta *= -1;
-	}
+	// if(settings.canvasThree.x >= settings.canvasThree.xRightMost || settings.canvasThree.x <= settings.canvasThree.xLeftMost)
+	// {
+	// 	settings.canvasThree.delta *= -1;
+	// }
 
 
 	// if(cursors.left.isDown)
@@ -113,20 +115,53 @@ function update()
 
 
 	// settings.canvasOne.x += settings.canvasOne.delta;
-	settings.canvasTwo.x += settings.canvasTwo.delta;
-	settings.canvasThree.x += settings.canvasThree.delta;
+	// settings.canvasTwo.x += settings.canvasTwo.delta;
+	// settings.canvasThree.x += settings.canvasThree.delta;
 
 	gameWindow.fillStyle = settings.canvasOne.fillColor;
 	gameWindow.fillRect(settings.canvasOne.x, settings.canvasOne.y, settings.canvasOne.width, settings.canvasOne.height);
 	
+	// gameWindow.fillStyle = settings.canvasTwo.fillColor;
+	// gameWindow.fillRect(settings.canvasTwo.x, settings.canvasTwo.y, settings.canvasTwo.width, settings.canvasTwo.height);
+	
+	// gameWindow.fillStyle = settings.canvasThree.fillColor;
+	// gameWindow.fillRect(settings.canvasThree.x, settings.canvasThree.y, settings.canvasThree.width, settings.canvasThree.height);
+}
+
+function updateTwo()
+{
+	gameWindow.fillStyle = settings.canvasTwo.backgroundColor;
+	gameWindow.fillRect(settings.canvasTwo.canvasStartX, settings.canvasTwo.canvasStartY, settings.canvasTwo.canvasWidth, settings.canvasTwo.canvasHeight);
+	
+	if(settings.canvasTwo.x >= settings.canvasTwo.xRightMost || settings.canvasTwo.x <= settings.canvasTwo.xLeftMost)
+	{
+		settings.canvasTwo.delta *= -1;
+	}
+
+	settings.canvasTwo.x += settings.canvasTwo.delta;
+
 	gameWindow.fillStyle = settings.canvasTwo.fillColor;
 	gameWindow.fillRect(settings.canvasTwo.x, settings.canvasTwo.y, settings.canvasTwo.width, settings.canvasTwo.height);
-	
-	gameWindow.fillStyle = settings.canvasThree.fillColor;
-	gameWindow.fillRect(settings.canvasThree.x, settings.canvasThree.y, settings.canvasThree.width, settings.canvasThree.height);
 }
 
 
+function updateThree()
+{
+
+	gameWindow.fillStyle = settings.canvasThree.backgroundColor;
+	gameWindow.fillRect(settings.canvasThree.canvasStartX, settings.canvasThree.canvasStartY, settings.canvasThree.canvasWidth, settings.canvasThree.canvasHeight);
+
+	
+	if(settings.canvasThree.x >= settings.canvasThree.xRightMost || settings.canvasThree.x <= settings.canvasThree.xLeftMost)
+	{
+		settings.canvasThree.delta *= -1;
+	}
+
+	settings.canvasThree.x += settings.canvasThree.delta;
+
+	gameWindow.fillStyle = settings.canvasThree.fillColor;
+	gameWindow.fillRect(settings.canvasThree.x, settings.canvasThree.y, settings.canvasThree.width, settings.canvasThree.height);
+}
 
 $(document).keydown(function(key) 
 {
