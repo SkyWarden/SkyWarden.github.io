@@ -1,18 +1,19 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang = "en">
 
 <head>
 
 	<title>ADNS Development</title>
 
-	<link href="main.css" rel="stylesheet" type="text/css" />
+	<link href="main.css" rel="stylesheet" type="text/css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<script>
 	$(function(){
-		$("#navbar_object").load("navbar.html"); 
+		$("#navbar").load("navbar.html");
+		$("#footer").load("footer.html");
 		});
 	</script> 
 
@@ -22,17 +23,29 @@
 
 	<div id = "content">
 
-		<div id="navbar_object"></div>
+		<div id="navbar"></div>
 			
 		<div class = "header development">
 
 			<div class = "header_text">
-				Development
+				Development 
 			</div>
 
 		</div>
 
-		<p>This is where the documentation, diagrams, and schematics can go.</p>
+		<div class = "sub_section">
+
+			<div class = "inner_section">
+
+				<br>
+				<p style = "text-align: center;" class = "main_format">This is where the documentation, diagrams, and schematics can go.</p>
+				<br>
+
+			</div>
+
+		</div>
+
+		<div id = "footer"></div>
 
 	</div>
 

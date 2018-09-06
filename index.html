@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang = "en">
 
 <head>
 
 	<title>ADNS Home</title>
 
-	<link href="main.css" rel="stylesheet" type="text/css" />
+	<link href="main.css" rel="stylesheet" type="text/css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 	$(function(){
-		$("#navbar_object").load("navbar.html"); 
+		$("#navbar").load("navbar.html");
+		$("#footer").load("footer.html");
 		});
 	</script> 
 
@@ -21,7 +22,7 @@
 
 	<div id = "content">
 
-		<div id="navbar_object"></div>
+		<div id="navbar"></div>
 
 		<div class="header home">
 
@@ -31,23 +32,74 @@
 				Aerial Drone Notification System
 			</span>
 
-			<img id = "unr_logo" src="images/Nevada_logo.gif"/>
+			<img id = "unr_logo" src = "images/Nevada_logo.gif" alt = "University of Nevada - Reno"/>
 
 		</div>
 
-		<br>
+		<div style = "background-image: url(images/matrice_rot_blur.png)" class = "sub_section">
 
-		<script src="button.js"></script>
-		<button onclick="window.message();"> Button </button>
+			<h1 style = "font-size: 28px; padding: 0px 25px; padding-top: 16px;" class = "section_title">Core Functionality</h1>
 
-		<nav>
-	  		<ul>
-	    		<li><a href="demo.html">Demo</a></li>
-	  		</ul>
-		</nav>
+			<div class = "specifications">
+
+				<img style = "width: 42px; height: 36px;" src = "images/alert.png" alt = "Alert"/>
+
+				<p class = "main_format"><span class = "spec_header">Real-time Alerts</span>
+				<br>
+				Visual and audio alerts that trigger when constraints are exceeded.</p><br><br>
+
+				<img style = "width: 81px; height: 36px;" src = "images/battery.png" alt = "Battery Level"/>
+
+				<p class = "main_format"><span class = "spec_header">Battery Monitoring</span>
+				<br>
+				Accurate voltage readings continuously updated during flight.</p><br>
+
+			</div>
+
+			<div class = "specifications">
+
+				<img style = "width: 36px; height: 36px;" src = "images/prox.png" alt = "Proximity"/>
+
+				<p class = "main_format"><span class = "spec_header">Proximity Tracking</span>
+				<br>
+				Distance to objects and test area boundaries are tracked during operation.</p><br><br>
+
+				<img style = "width: 36px; height: 36px;" src = "images/ros.png" alt = "Robotic Operating System"/>
+
+				<p class = "main_format"><span class = "spec_header">ROS Marker Publishing</span>
+				<br>
+				Proximity data is published to ROS via markers to generate visual vectors representing distance.</p><br>
+
+			</div>
+
+			<div id = "clear"></div>
+
+		</div>
+
+		<div style = "background-color: #70ad47;" class = "sub_section">
+
+			<h1 style = "font-size: 28px; color: white; padding: 0px 25px; padding-top: 16px;" class = "section_title">Demo Testing</h1>
+
+			<div style = "margin-left: 0; padding-left: 25px;" class = "inner_section">
+
+				<script src="button.js"></script>
+				<button onclick="window.message();"> Button </button>
+
+				<nav>
+			  		<ul>
+			    		<li><a href="demo.html">Demo</a></li>
+			  		</ul>
+				</nav>
+
+				<br>
+
+			</div>
+
+		</div>
+
+		<div id = "footer"></div>
 
 	</div>
-
 
 </body>
 

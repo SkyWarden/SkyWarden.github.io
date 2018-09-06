@@ -1,48 +1,24 @@
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
 html, body
 {
 	padding: 0;
 	margin: 0;
+	background-image: url("images/main_background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
 }
 
-#myP
+h1.section_title
 {
 	color: #636363;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: justify;
-	text-justify: inter-word;
-}
-
-#about .myh1
-{
-	color: #636363;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;;
-	font-size: 20px;
-}
-
-#content
-{
-	left: 0;
-	right: 0;
-	width: 100%;
-	max-width: 1500px;
-	margin: auto;
-}
-
-#header 
-{
-    position: relative;
-    background-color: #70ad47;
-    width: 100%;
-    max-width: 1500px;
-    top: 0;
-    height: 500px;
-    text-align: center;
-	font-weight: 800;
-    font-size: 50px;
-    font-family: Helvetica;
-    color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	margin-top: 0px;
+	padding-top: 16px;
+	padding-left: 50px;
 }
 
 div.header
@@ -62,7 +38,8 @@ div.header div.header_text
 	width: inherit;
 	max-width: inherit;
 	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 0;
 	font-size: 64px;
 	color: #FFFFFF;
 	font-weight: 400;
@@ -92,7 +69,8 @@ div.header div.header_tint_box
 	position: absolute;
 	background-color: black;
 	opacity: 0.7;
-	width: 1500px;
+	width: inherit;
+	max-width: inherit;
 	height: 500px;
 }
 
@@ -117,6 +95,32 @@ div.header div.header_about_box
 	line-height: 125px;
 }
 
+div.sub_section
+{
+	position: relative;
+	width: inherit;
+	max-width: inherit;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 690px -150px;
+}
+
+div.inner_section
+{
+	position: relative;
+	width: inherit;
+	max-width: 1000px;
+	margin: auto;
+}
+
+div.specifications
+{
+	position: relative;
+	padding-left: 50px;
+	width: 375px;
+	float: left;
+}
+
 span.home
 {
 	position: absolute;
@@ -124,7 +128,7 @@ span.home
 	max-width: inherit;
 	min-width: 650px;
 	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
 	color: #FFFFFF;
 	font-weight: 700;
@@ -133,12 +137,61 @@ span.home
 
 span.about
 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #FFFFFF;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1.1;
 	padding-left: 10px;
+}
+
+p.main_format
+{
+	color: #636363;
+	font-family: 'Roboto', sans-serif;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: justify;
+	text-justify: inter-word;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.video
+{
+    overflow: hidden;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    box-shadow: 0px 0px 30px 5px #000000;
+}
+
+.video iframe
+{
+    top:0;
+    height:100%;
+    width: 100%;
+    position:absolute;
+}
+
+.spec_header
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: black;
+}
+
+#content
+{
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 1500px;
+	min-width: 650px;
+	margin: auto;
 }
 
 #unr_logo
@@ -152,17 +205,13 @@ span.about
 	padding-top: 230px;
 }
 
-#body
-{
-	width: inherit;
-	max-width: 1000px;
-	min-width: 1000px;
-	margin: auto;
-	padding-left: 50px;
-}
-
 #about .myul
 {
 	color: black;
 	font-size: 12px;
+}
+
+#clear
+{
+	clear: both;
 }

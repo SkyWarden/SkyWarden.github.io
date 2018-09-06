@@ -1,65 +1,98 @@
-
 <!DOCTYPE HTML>
 
-<html>
+<html lang = "en">
 
 <head>
 
 	<title>About ADNS</title>
 
-	<link href="main.css" rel="stylesheet" type="text/css" />
+	<link href="main.css" rel="stylesheet" type="text/css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 	<script>
 	$(function(){
-		$("#navbar_object").load("navbar.html"); 
+		$("#navbar").load("navbar.html");
+		$("#footer").load("footer.html");
 		});
-	</script> 
-
+	</script>
 
 </head>
-
 
 <body id="about">
 
 	<div id = "content">
 
-		<div id="navbar_object"></div>
+		<div id="navbar"></div>
 
 		<div class="header about">
 
 			<div class = "header_about_box">
+
 				<span class = "about">
-					<p>
-						<b><font size="5px">Aerial Drone Notification System</font><br>
-						<i>Department of Computer Science, UNR<br>
-						CS 426: Senior Projects, Spring 2018</i></b>
-					</p>
+
+					<b><span style = "font-size: 20px;">Aerial Drone Notification System</span><br>
+					<i>Department of Computer Science, UNR<br>
+					CS 426: Senior Projects, Spring 2018</i></b>
+
 				</span>
+
 			</div>
 
 		</div>
 
-		<div id = "body">
-			<h1 class = "myh1">Project Brief</h1>
+		<div class = "sub_section">
 
-			<p id = "myP">
+			<div class = "inner_section">
 
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus dui, ornare a erat fermentum, sagittis pretium leo. Donec mollis felis nunc, in finibus nisi ultrices sed. Nam ultrices, neque quis feugiat molestie, nisl est molestie leo, a viverra arcu nibh nec purus. Aenean non magna vitae sapien ultricies viverra sit amet sit amet sapien. Vivamus id convallis nulla. Phasellus mattis egestas nunc, nec faucibus ex. Integer justo tellus, ultrices in scelerisque quis, laoreet a risus. Curabitur sit amet fermentum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque non faucibus mauris, efficitur varius nisl. Integer ac elit ac mi tincidunt consectetur ut vel arcu. Proin ac porta nisi, in dignissim sem. Duis in nisi odio. Etiam sed suscipit ex, lobortis luctus tellus. Vestibulum non auctor massa.
-				<br><br>
-				Sed mollis sapien magna, eget volutpat massa varius sed. Duis non posuere orci. Nam molestie nisi diam, nec ornare metus mattis sit amet. Quisque rhoncus feugiat aliquam. Nam commodo dignissim rhoncus. Integer blandit consectetur diam, nec malesuada est condimentum a. Fusce facilisis convallis lorem vel lobortis.
-				<br><br>
-				Etiam a sapien sem. Cras fermentum facilisis ipsum sit amet tristique. Cras semper luctus varius. Proin pharetra malesuada pretium. Curabitur vulputate, turpis a tincidunt consequat, purus felis rhoncus enim, et consequat justo justo et orci. Duis mauris odio, tincidunt ac justo sed, finibus vulputate lacus. Etiam laoreet, turpis at volutpat dapibus, dolor neque mollis ex, vitae varius erat diam imperdiet magna. Donec euismod sapien in lorem commodo dapibus. Nunc aliquam leo nulla, interdum mollis ex commodo sit amet. Suspendisse a venenatis tellus. Pellentesque nec mi tortor. Fusce faucibus dictum nisi, vitae maximus massa vehicula ut. Integer tincidunt scelerisque interdum. Ut porta, risus et egestas auctor, odio nibh egestas quam, quis blandit orci est at mi.
-				<br>
-			</p>
-			
-			<h1 class = "myh1">Project Overview Video</h1>
+				<h1 class = "section_title">Project Brief</h1>
 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/IZyW6jYJIxE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<p style = "padding: 0px 50px;" class = "main_format">
+
+					Most aerial drone systems have little concern for the spatial operating conditions since they are used for outdoor activities, but spatial constraints are placed on indoor aerial drones that have limited mobility when performing similar tasks or drones that must maneuver around objects while in operation. Regarding these types of issues, the senior project that Team #23 will develop involves working with the Autonomous Robots Lab, ARL, in developing a notification system for an aerial drone that operates near obstacles such as walls and other stationary objects while indoors, in mines, or areas where space may be limited. Additionally, pertinent operational data will be monitored to assist the researchers in the ARL by monitoring aerial drone battery consumption, critical proximity surveillance, and aerial drone orientation.
+					<br><br>
+					Battery levels will be monitored with on-board sensors used to gauge the battery's operating current and voltage levels in real-time. It is imperative that the battery's voltage level does not fall below a certain threshold ensuring the preservation of the battery prolonging the battery's life. The notification system will monitor the operating current and voltage levels and alert the user whenever the battery is near or at the threshold set by the user. Additionally, a proximity warning system using multiple Time of Flight, ToF, sensors will monitor the drone's distance between objects such as boundary walls. Moreover, the proximity system will monitor the drone's altitude and alert the user if the drone is close to the ground while in autonomous operation. 
+					<br><br>
+					For each critical event, the on-board sensors will relay the information wirelessly via WiFi to a base station that acts as an intermediary between the notification system and the user. The base station will gather the data and will be equipped with auditory and visual alerts for each critical event. Furthermore, the base station will have options to reset the alert system whenever the user deems it necessary. Progress made thus far includes increasing the polling rate for the sensors to ensure a proximity warning occurs as quickly as possible. The proximity sensors are polling at 60Hz which is optimal for applicative purposes. Additionally, wireless transmission has been implemented and transmission rates for data transfer has been optimized at 2000 bits per second. The wireless transmission on the receiver end has also been devised to parse the data for each transmission received to detect the sensor that triggers any proximity warnings.
+					<br><br>
+				</p>
+
+			</div>
+
 		</div>
 
+		<div class = "sub_section" style = "background-color: #70ad47;">
 
+			<div class = "inner_section">
+			
+				<h1 style = "color: white;" class = "section_title">Project Overview Video</h1>
+				<br>
 
+				<div class = "video">
+
+					<iframe src="https://www.youtube.com/embed/IZyW6jYJIxE" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+				</div>
+				<br><br>
+				
+			</div>
+
+		</div>
+
+		<div class = "sub_section">
+
+			<div class = "inner_section">
+
+				<h1 class = "section_title">Resources</h1>
+
+				<br>
+
+			</div>
+
+		</div>
+
+		<div id = "footer"></div>
+		
 	</div>
 
 </body>
