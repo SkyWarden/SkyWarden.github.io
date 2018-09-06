@@ -16,6 +16,8 @@ var settings =
 		xRightMost: 450,
 		x: 350,
 		y: 200,
+		x_speed: 2,
+		x_acceleration: 1,
 		delta: 10,
 		backgroundColor: "#ffccdd",
 		fillColor: "#003366"
@@ -168,10 +170,13 @@ $(document).keydown(function(key)
 	if(key.keyCode == 37)
 	{
 		settings.canvasOne.x -= 8;
+
 	}
 	else if(key.keyCode == 39)	
 	{	
-		settings.canvasOne.x += 8;
+		// settings.canvasOne.x += 8;
+		settings.canvasOne.x_speed += settings.canvasOne.x_acceleration;
+		settings.canvasOne.x += settings.canvasOne.x_speed;
 	}
 	else if(key.keyCode == 38)
 	{
@@ -180,6 +185,26 @@ $(document).keydown(function(key)
 	else if(key.keyCode == 40)
 	{		
 		settings.canvasOne.y += 8;
+	}
+});
+
+$(document).keyup(function(key) 
+{
+	if(key.keyCode == 37)
+	{
+
+	}
+	else if(key.keyCode == 39)	
+	{	
+		settings.canvasOne.x_speed = 0;
+	}
+	else if(key.keyCode == 38)
+	{
+
+	}
+	else if(key.keyCode == 40)
+	{		
+
 	}
 });
 
