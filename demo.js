@@ -22,8 +22,9 @@ var settings =
 		xRightMost: 450,
 		x: 350,
 		y: 200,
+		acceleration: 1,
 		x_speed: 2,
-		x_acceleration: 1,
+		y_speed: 2,
 		delta: 10,
 		backgroundColor: "#ffccdd",
 		fillColor: "#003366"
@@ -178,29 +179,31 @@ $(document).keydown(function(key)
 {
 	if(key.keyCode == 37)
 	{
-		settings.canvasOne.x -= 8;
-		// settings.canvasOne.x -= 8;
+		settings.canvasOne.x_speed += settings.canvasOne.acceleration;
+		settings.canvasOne.x -= settings.canvasOne.x_speed;
 		LEFT = true;
 		horizontal = -10;
 	}
 	else if(key.keyCode == 39)	
 	{	
-		settings.canvasOne.x_speed += settings.canvasOne.x_acceleration;
+		settings.canvasOne.x_speed += settings.canvasOne.acceleration;
 		settings.canvasOne.x += settings.canvasOne.x_speed;
 		RIGHT = true;
 		horizontal = 10;
 	}
 	else if(key.keyCode == 38)
 	{
+		settings.canvasOne.y_speed += settings.canvasOne.acceleration;
+		settings.canvasOne.y -= settings.canvasOne.y_speed;
 		UP = true;
 		vertical = -10
-		 // settings.canvasOne.y -= 8;
 	}
 	else if(key.keyCode == 40)
 	{		
+		settings.canvasOne.y_speed += settings.canvasOne.acceleration;
+		settings.canvasOne.y += settings.canvasOne.y_speed;
 		DOWN = true;
 		vertical = 10;
-		// settings.canvasOne.y += 8;
 	}
 });
 
@@ -208,25 +211,23 @@ $(document).keyup(function(key)
 {
 	if(key.keyCode == 37)
 	{
-		// settings.canvasOne.x -= 8;
+		settings.canvasOne.x_speed = 2;
 		LEFT = false;
 	}
 	else if(key.keyCode == 39)	
 	{	
-		// settings.canvasOne.x += 8;
-
+		settings.canvasOne.x_speed = 2;
 		RIGHT = false;
-		settings.canvasOne.x_speed = 0;
 	}
 	else if(key.keyCode == 38)
 	{
+		settings.canvasOne.y_speed = 2;
 		UP = false;
-		 // settings.canvasOne.y -= 8;
 	}
 	else if(key.keyCode == 40)
-	{		
+	{
+		settings.canvasOne.y_speed = 2;
 		DOWN = false;
-		// settings.canvasOne.y += 8;
 	}
 });
 
