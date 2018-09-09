@@ -85,6 +85,14 @@
 
 				<h1 class = "section_title">Resources</h1>
 
+				<button class = "topic_expand">Websites</button>
+
+				<div class = "topic_links">
+
+					<p class = "main_format">Test</p>
+
+				</div>
+
 				<br>
 
 			</div>
@@ -94,6 +102,32 @@
 		<div id = "footer"></div>
 		
 	</div>
+
+<script>
+
+	var expand = document.getElementsByClassName("topic_expand");
+	var index;
+
+	for(index = 0; index < expand.length; index++)
+	{
+		expand[index].addEventListener("click", function()
+		{
+			this.classList.toggle("active");
+
+			var content = this.nextElementSibling;
+
+			if(content.style.maxHeight)
+			{
+				content.style.maxHeight = null;
+			} 
+			else
+			{
+				content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		});
+	}
+
+</script>
 
 </body>
 
