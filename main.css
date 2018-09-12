@@ -180,22 +180,20 @@ table, tr, td, th
 {
     border: 1px solid black;
     border-collapse:collapse;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 50px;
+    margin: auto;
 }
 
-tr.header
-{
-	cursor: pointer;
+tr {
+    display: none;
 }
 
-.header .sign:after
-{
-	content: "+";
-	display: inline-block;
-}
-
-.header.expand .sign:after
-{
-	content: "-";
+tr.header {
+    display: table-row;
 }
 
 .spec_header
