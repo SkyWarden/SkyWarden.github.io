@@ -85,15 +85,21 @@
 
 				<h1 class = "section_title">Resources</h1>
 
-				<button class = "topic_expand">Websites</button>
+				<table border = "0">
 
-				<div class = "topic_links">
+					<tr class = "header expand">
 
-					<p class = "main_format">Test</p>
+						<th colspan = "2">Header<span class = "sign"></span></th>
 
-				</div>
+					</tr>
 
-				<br>
+					<tr>
+
+						<td>Hello</td>
+
+					</tr>
+
+				</table>
 
 			</div>
 
@@ -104,29 +110,9 @@
 	</div>
 
 <script>
-
-	var expand = document.getElementsByClassName("topic_expand");
-	var index;
-
-	for(index = 0; index < expand.length; index++)
-	{
-		expand[index].addEventListener("click", function()
-		{
-			this.classList.toggle("active");
-
-			var content = this.nextElementSibling;
-
-			if(content.style.maxHeight)
-			{
-				content.style.maxHeight = null;
-			} 
-			else
-			{
-				content.style.maxHeight = content.scrollHeight + "px";
-			} 
-		});
-	}
-
+	$('.header').click(function(){
+		$(this).toggleClass('expand').nextUntil('tr.header').slideToggle(100);
+	});
 </script>
 
 </body>

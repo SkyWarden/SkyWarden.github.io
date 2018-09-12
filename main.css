@@ -176,35 +176,26 @@ p.main_format
     position:absolute;
 }
 
-.topic_expand
+table, tr, td, th
 {
-	background-color: rgba(255,255,255,0.5);
-	overflow: hidden;
-	display: block;
-	color: gray;
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+
+tr.header
+{
 	cursor: pointer;
-	padding-left: 50px;
-	width: 100%;
-	max-width: 900px;
-	border-style: solid;
-	text-align: left;
-	/*outline-style: solid;*/
-	font-size: 15px;
 }
 
-.active, .topic_expand:hover
+.header .sign:after
 {
-	color: yellow;
+	content: "+";
+	display: inline-block;
 }
 
-.topic_links
+.header.expand .sign:after
 {
-	padding: 0 18px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	background-color: rgba(255,255,255,0.5);
-	max-width: 1000px;
+	content: "-";
 }
 
 .spec_header
