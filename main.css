@@ -182,17 +182,25 @@ table, tr, td, th
     border-collapse:collapse;
     box-sizing: border-box;
     position: relative;
+    text-align: left;
     width: 100%;
     max-width: 900px;
     padding: 0 50px;
     margin: auto;
 }
 
-tr {
+th
+{
+	padding-left: 20px;
+}
+
+tr 
+{
     display: none;
 }
 
-tr.header {
+tr.header 
+{
     display: table-row;
 }
 
