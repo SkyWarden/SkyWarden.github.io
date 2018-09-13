@@ -182,6 +182,7 @@ table, tr, td, th
     border-collapse:collapse;
     box-sizing: border-box;
     position: relative;
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     width: 100%;
     max-width: 900px;
@@ -191,7 +192,7 @@ table, tr, td, th
 
 th
 {
-	padding-left: 20px;
+	padding: 12px 20px;
 }
 
 tr 
