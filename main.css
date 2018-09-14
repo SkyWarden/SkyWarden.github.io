@@ -178,12 +178,14 @@ p.main_format
 
 table, tr, td, th
 {
-    border: 1px solid black;
+    border: 1px solid gray;
     border-collapse:collapse;
+    background-color: rgba(96, 100, 107, 0.1);
     box-sizing: border-box;
     position: relative;
     font-family: 'Roboto', sans-serif;
     text-align: left;
+    color: white;
     width: 100%;
     max-width: 900px;
     padding: 0 50px;
