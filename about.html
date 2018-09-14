@@ -87,82 +87,54 @@
 
 				<h1 style = "color: white;" class = "section_title">Resources</h1>
 
-				<table>
+				<button class="accordion">Websites</button>
+				<div class="panel">
+					<br>
+					<a href = "https://www.dji.com/matrice100" target = "new">Matrice 100: Quadcopter for developers</a><br><br>
+					<a href = "http://mydronelab.com/blog/extending-drone-battery-life.html" target = "new">How to extend drone battery life</a><br><br>
+					<a href = "http://www.ros.org/" target = "new">ROS website</a><br><br>
+					<a href = "http://www.pygtk.org/" target = "new">Python website</a><br><br>
+					<a href = "https://www.raspberrypi.org/documentation/" target = "new">Raspberry Pi documentation</a><br><br>
+				</div>
 
-					<tr class = "header">
+				<button class="accordion">Papers</button>
+				<div class="panel">
+		  			<ul style = "padding-left: 25px;">
+						<li>K. Alexis, G. Nikolakopoulos, A. Tzes, "Autonomous Quadrotor Position and Attitude PID/PIDD Control in GPS-denied Environments".  The International Review of Automatic Control, Vol. 4., 2011.</li>
+						<br><li>G. Ermacora, M. Chiaberge, B. Bona, et. al.  "A Cloud Robotics Architecture for an Emergency Management and Monitoring Service in a Smart City Environment".  IEEE/RSJ International Conference of Intelligent Robots and Systems, 2013.</li>
+						<br><li>J. Huerta, "Introducing the Quaternions".  Department of Mathematics, University of California Riverside, 2010.</li>
+					</ul>
+				</div>
 
-						<th colspan = "2">Websites<span class = "sign"></span></th>
-
-					</tr>
-
-					<tr>
-						<td><br><a href = "https://www.dji.com/matrice100" target = "new">Matrice 100: Quadcopter for developers</a><br><br>
-						<a href = "http://mydronelab.com/blog/extending-drone-battery-life.html" target = "new">How to extend drone battery life</a><br><br>
-						<a href = "http://www.ros.org/" target = "new">ROS website</a><br><br>
-						<a href = "http://www.pygtk.org/" target = "new">Python website</a><br><br>
-						<a href = "https://www.raspberrypi.org/documentation/" target = "new">Raspberry Pi documentation</a><br><br></td>
-					</tr>
-
-					<tr class = "header">
-
-						<th colspan = "2">Papers<span class = "sign"></span></th>
-
-					</tr>
-
-					<tr>
-						<td style = "padding-left: 30px;">
-							<ul>
-								<li>K. Alexis, G. Nikolakopoulos, A. Tzes, "Autonomous Quadrotor Position and Attitude PID/PIDD Control in GPS-denied Environments".  The International Review of Automatic Control, Vol. 4., 2011.</li>
-								<br><li>G. Ermacora, M. Chiaberge, B. Bona, et. al.  "A Cloud Robotics Architecture for an Emergency Management and Monitoring Service in a Smart City Environment".  IEEE/RSJ International Conference of Intelligent Robots and Systems, 2013.</li>
-								<br><li>J. Huerta, "Introducing the Quaternions".  Department of Mathematics, University of California Riverside, 2010.</li>
-							</ul>
-						</td>
-					</tr>
-
-					<tr class = "header">
-
-						<th colspan = "2">Datasheets<span class = "sign"></span></th>
-
-					</tr>
-
-					<tr>
-						<td><br>Raspberry PI 3<br><br>
+				<button class="accordion">Datasheets</button>
+				<div class="panel">
+					<p>
+						<br>Raspberry PI 3<br><br>
 						Arduino Nano<br><br>
 						Teensy 3.2 Microcontroller<br><br>
 						VL53L0X Time of Flight (TOF) Sensor<br><br>
 						INA219 Voltage/Current Sensor<br><br>
 						NRF24L01 Tranceiver Module<br><br>
-						74LS373 D-latch<br><br></td>
-					</tr>
+						74LS373 D-latch<br><br>
+				 	</p>
+				</div>
 
-					<tr class = "header">
-
-						<th colspan = "2">News<span class = "sign"></span></th>
-
-					</tr>
-
-					<tr>
-						<td><br>February 02, 2018<br>
+				<button class="accordion">News</button>
+				<div class="panel">
+					<p>
+				  		<br>February 02, 2018<br>
 						How Robotic Security Systems Can Prevent Drone Mishaps and Attacks<br><br>
 						December 31, 2017<br>
-						Find Your Wat With Tiny Laser Beams<br><br>
+						Find Your Way With Tiny Laser Beams<br><br>
 						February 14, 2017<br>
-						Sensors at the Speed of Light<br><br></td>
-					</tr>
+						Sensors at the Speed of Light<br><br>
+					</p>
+				</div>
 
-					<tr class = "header">
-
-						<th colspan = "2">Problem Domain Books<span class = "sign"></span></th>
-
-					</tr>
-
-					<tr>
-
-						<td>Under Construction</td>
-
-					</tr>
-
-				</table>
+				<button class="accordion">Problem Domain Books</button>
+				<div class="panel">
+					<p>Under Construction</p>
+				</div>
 
 				<br>
 
@@ -175,11 +147,20 @@
 	</div>
 
 <script>
-	$('tr.header').click(function(){
-    	$(this).nextUntil('tr.header').css('display', function(i,v){
-        	return this.style.display === 'table-row' ? 'none' : 'table-row';
-    	});
-	});
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 
 </body>
