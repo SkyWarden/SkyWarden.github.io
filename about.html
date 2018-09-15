@@ -158,6 +158,11 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
+      $(".accordion").on("click", function(){
+		$("html, body").animate({ scrollTop: $(this).offset().top }, 'slow');
+  		$('html,body').stop(true, false).animate({ scrollTop: $(this).offset().top })
+        clearTimeout(timeout);
+		});
     } 
   });
 }
