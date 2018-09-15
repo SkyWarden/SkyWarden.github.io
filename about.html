@@ -157,12 +157,10 @@ for (i = 0; i < acc.length; i++) {
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-      $(".accordion").on("click", function(){
+      	panel.style.maxHeight = panel.scrollHeight + "px";
 		$("html, body").animate({ scrollTop: $(this).offset().top }, 'slow');
   		$('html,body').stop(true, false).animate({ scrollTop: $(this).offset().top })
         clearTimeout(timeout);
-		});
     } 
   });
 }
