@@ -35,6 +35,20 @@
 }
 
 /*SkyWarden logo*/
+.navbar a.img
+{
+    float: left;
+    padding-top: 0px;
+	padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.navbar a.img:hover
+{
+	background: initial;
+	color: inital;
+}
+
 .navbar img
 {
     float: left;
